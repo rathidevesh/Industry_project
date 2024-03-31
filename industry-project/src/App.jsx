@@ -8,6 +8,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import NoteState from './context/notes/NoteState';
 import Instruction from './components/Instruction';
+import AddCandidateForm from './components/AddCandidateForm';
 // import './App.css'; 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
             <Route exact path="/login" element={<Login/>} />
             <Route exact path="/signup" element={<Signup/>} />
             <Route exact path="/instruction" element={<Instruction/>} />
+            <Route exact path='/addcandidate' element={<AddCandidateForm />} />
             </Routes>
           </div>
         </Router>
