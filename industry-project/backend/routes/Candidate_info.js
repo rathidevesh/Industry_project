@@ -46,7 +46,7 @@ router.post('/add-candidate', upload, async (req, res) => {
 
         const candidate = new Candidate_Information({ name, email, DOB, phoneNumber, address, images, aadhar: aadharFiles });
         await candidate.save();
-
+        
         res.status(200).json({ message: 'Candidate added successfully' });
     } catch (error) {
         console.error(error);

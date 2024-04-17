@@ -6,7 +6,11 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    email:{
+    rollno:{
+        type: String,
+        required: true
+    },
+    prn:{
         type: String,
         required: true,
         unique: true
@@ -15,10 +19,7 @@ const UserSchema = new Schema({
         type: String,
         required: true
     },
-    date:{
-        type: Date,
-        default: Date.now
-    },
+    
   });
   const User = mongoose.model('user', UserSchema);
   module.exports = User;

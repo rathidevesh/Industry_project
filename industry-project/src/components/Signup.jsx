@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
 
 const Signup = (props) => {
 
@@ -36,9 +37,12 @@ const onChange = (e)=>{
   
 
   return (
-    <div className="container mt-2">
+    <div className="container mt-2 loginpage">
+      <div className="loginInfo">
+      <div className="dashboardlogin">
       <h2 className='my-3'>Create an account to continue</h2>
-      <form onSubmit={handleSubmit}>
+      </div>
+      <form  className='loginForm' onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="name">Enter Your Name</label>
           <input
@@ -81,21 +85,22 @@ const onChange = (e)=>{
           />
         </div>
         <div className="form-group">
-          <label htmlFor="cpassword">Conform Password</label>
+          <label htmlFor="cpassword">Confirm Password</label>
           <input
             type="password"
             className="form-control"
             id="cpassword"
             name='cpassword'
             onChange={onChange}
-            placeholder="Conform Password"
+            placeholder="Confirm Password"
           />
         </div>
 
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-primary" style={{margin:"15px 0px"}}>
           Submit
         </button>
       </form>
+    </div>
     </div>
   );
 };
